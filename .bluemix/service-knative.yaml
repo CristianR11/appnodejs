@@ -11,4 +11,4 @@ spec:
         - image: REGISTRY_URL/replace-me-namespace/meanstackmongodbexpressjsangularnodejslnlk
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 8080

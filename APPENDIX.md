@@ -32,7 +32,7 @@ Note, when running the project with native commands in either dev or release mod
     npm run dev
     ```
 
-    A development web server runs on port 3000 and the app itself runs on port 3100. The web server and app will automatically reload if changes are made to the source.
+    A development web server runs on port 8080 and the app itself runs on port 3100. The web server and app will automatically reload if changes are made to the source.
 
 5. Run the app in interactive debug mode with the command:
 
@@ -40,7 +40,7 @@ Note, when running the project with native commands in either dev or release mod
     npm run debug
     ```
 
-    The app listens on port 5858 for the debug client to attach to it, and on port 3000 for app requests.
+    The app listens on port 5858 for the debug client to attach to it, and on port 8080 for app requests.
 
 ### In release mode
 
@@ -58,7 +58,7 @@ Note, when running the project with native commands in either dev or release mod
     npm start
     ```
 
-    The app will now run in release mode, listening on port 3000. Hot reload is not available in this mode.
+    The app will now run in release mode, listening on port 8080. Hot reload is not available in this mode.
 
 ## Deployment options
 
@@ -120,7 +120,7 @@ mongo-deployment        1        1        1           0          0s
 ==> v1/Service
 NAME                 CLUSTER-IP      EXTERNAL-IP  PORT(S)          AGE
 mongo                172.21.67.175   <nodes>      27017:30308/TCP  1s
-meanexample-service  172.21.231.153  <nodes>      3000:32080/TCP   1s
+meanexample-service  172.21.231.153  <nodes>      8080:32080/TCP   1s
 ```
 
 6. View the application
@@ -149,7 +149,7 @@ Lastly, we'll need the external port. This was already given to us in the previo
 $ kubectl get services
 NAME                  TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)           AGE
 kubernetes            ClusterIP   172.21.0.1       <none>        443/TCP           17h
-meanexample-service   NodePort    172.21.231.153   <none>        3000:32080/TCP    5h
+meanexample-service   NodePort    172.21.231.153   <none>        8080:32080/TCP    5h
 mongo                 NodePort    172.21.67.175    <none>        27017:30308/TCP   5h
 ```
 
